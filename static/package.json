@@ -2,24 +2,26 @@
   "name": "hyrise-rcm",
   "version": "0.0.1",
   "scripts": {
-    "postinstall": "npm run typings install",
+    "postinstall": "npm run fix_angular2 && npm run typings install",
+    "fix_angular2": "echo \"declare var Promise: PromiseConstructor;\n$(cat node_modules/angular2/src/facade/promise.d.ts)\" > node_modules/angular2/src/facade/promise.d.ts",
     "tsc": "tsc --outDir app",
     "tsc:w": "tsc -w --outDir app",
     "typings": "typings"
   },
   "license": "ISC",
   "dependencies": {
-    "angular2": "2.0.0-beta.6",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
-    "highcharts": "^4.2.1",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0",
-    "systemjs": "0.19.20",
-    "zone.js": "0.5.14"
+    "angular2": "^2.0.0-beta.21",
+    "es6-promise": "^4.1.1",
+    "es6-shim": "^0.35.3",
+    "highcharts": "^5.0.12",
+    "prepend-file-cli": "^1.0.6",
+    "reflect-metadata": "0.1.10",
+    "rxjs": "5.4.2",
+    "systemjs": "0.20.15",
+    "zone.js": "0.8.13"
   },
   "devDependencies": {
-    "typescript": "^1.7.5",
-    "typings": "^0.6.8"
+    "typescript": "^2.4.1",
+    "typings": "^2.1.1"
   }
 }

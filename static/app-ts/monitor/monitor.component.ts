@@ -1,4 +1,3 @@
-/// <reference path="../../typings/browser/ambient/jquery/jquery.d.ts" />
 import {Component, OnInit} from 'angular2/core';
 import {DataService} from '../service/data.service';
 import {Ng2Highcharts} from '../ng2-highcharts/ng2-highcharts';

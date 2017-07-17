@@ -20,9 +20,9 @@ export class DataService {
             "system": Array<Array<number>>
         }
     };
-    public nodes$: Observable<Array<Node>>;
-    public instances$: Observable<Array<Instance>>;
-    public throughput$: Observable<Array<Instance>>;
+    public nodes$: any;
+    public instances$: any;
+    public throughput$: any;
 
     constructor() {
         var me = this;

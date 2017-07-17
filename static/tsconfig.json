@@ -11,8 +11,9 @@
     "noLib": false
   },
   "exclude": [
-    "node_modules",
+    "**/node_modules/*",
     "typings/main",
-    "typings/main.d.ts"
+    "typings/main.d.ts",
+    "typings/globals/jquery/index.d.ts"
   ]
 }
